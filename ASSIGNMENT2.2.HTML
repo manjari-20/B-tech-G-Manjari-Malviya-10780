@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Layout Example</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        background: #2193b0;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .container {
+        display: flex;           
+        min-height: 100vh;
+    }
+    .sidebar {
+        background: #f0f0f0;
+        padding: 20px;
+        width: 250px;
+        box-sizing: border-box;
+    }
+    .content {
+        flex: 1;               
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .float-sidebar {
+        float: left;
+        width: 30%;
+    }
+
+    .float-content {
+        float: left;
+        width: 70%;
+    }
+
+    .clear {
+        clear: both;
+    }
+    @media (max-width: 599px) {
+        .container {
+            flex-direction: column;   
+        }
+
+        .sidebar, .content {
+            width: 100%;
+        }
+    }
+    @media (min-width: 600px) and (max-width: 900px) {
+        .container {
+            display: block;           
+        }
+
+        .sidebar {
+            width: 30%;
+        }
+
+        .content {
+            width: 70%;
+        }
+
+        .sidebar {
+            float: left;
+        }
+
+        .content {
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+    }
+    @media (min-width: 901px) {
+        .sidebar {
+            width: 250px;             
+        }
+
+        .content {
+            flex: 1;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<header>Responsive Layout Example</header>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h3>Sidebar</h3>
+        <p>Navigation links or options go here.</p>
+    </div>
+
+    <div class="content">
+        <h2>Main Content</h2>
+        <p>
+            This is the main content area. Resize the browser window to 
+            see the layout change using:
+        </p>
+
+        <ul>
+            <li><strong>Flexbox</strong> — desktop layout</li>
+            <li><strong>Float + Clear</strong> — tablet layout</li>
+            <li><strong>Stacked layout</strong> — mobile layout</li>
+        </ul>
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+</body>
+</html>

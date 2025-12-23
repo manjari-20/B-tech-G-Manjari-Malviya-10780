@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Scope Demo</title>
+</head>
+<body>
+<script>
+function addNumbers(a, b) {
+    return a + b;
+}
+function sayHello() {
+    console.log("Hello! This is a user-defined function.");
+}
+const multiply = function (x, y) {
+    return x * y;
+};
+console.log("Add 5 + 3 =", addNumbers(5, 3));
+sayHello();
+console.log("Multiply 4 × 2 =", multiply(4, 2));
+
+console.log("---- var, let, const SCOPE DEMO ----");
+var a = 10;
+if (true) {
+    var a = 20; 
+    console.log("Inside block (var):", a);
+}
+console.log("Outside block (var):", a); 
+
+let b = 10;
+if (true) {
+    let b = 20; 
+    console.log("Inside block (let):", b);
+}
+console.log("Outside block (let):", b); 
+const c = 30;
+console.log("CONST value:", c);
+if (true) {
+    let d = 100;
+    const e = 200;
+    console.log("Inside block (let):", d);
+    console.log("Inside block (const):", e);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show / Hide & Toggle Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    button {
+      margin: 5px 5px 10px 0;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    /* Box styling */
+    .box {
+      width: 250px;
+      padding: 15px;
+      background-color: lightblue;
+      margin-top: 10px;
+    }
+
+    /* Hidden class */
+    .hidden {
+      display: none;
+    }
+
+    /* Highlight class */
+    .highlight {
+      color: white;
+      background-color: green;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Show / Hide HTML Elements & Toggle CSS Classes</h1>
+
+  <!-- Example 1: Show & Hide using buttons -->
+  <h2>1. Show & Hide Element</h2>
+  <button onclick="showBox()">Show</button>
+  <button onclick="hideBox()">Hide</button>
+
+  <div id="box1" class="box hidden">
+    This box is shown or hidden using JavaScript.
+  </div>
+
+  <!-- Example 2: Toggle show/hide with one button -->
+  <h2>2. Toggle Show / Hide (Single Button)</h2>
+  <button onclick="toggleBox()">Toggle</button>
+
+  <div id="box2" class="box">
+    Click the button to toggle me.
+  </div>
+
+  <!-- Example 3: Toggle CSS class -->
+  <h2>3. Toggle CSS Class</h2>
+  <button onclick="toggleHighlight()">Toggle Highlight</button>
+
+  <p id="text">
+    This text changes its style using CSS class toggle.
+  </p>
+
+  <!-- JavaScript -->
+  <script>
+    // Example 1: Show and Hide
+    function showBox() {
+      document.getElementById("box1").classList.remove("hidden");
+    }
+
+    function hideBox() {
+      document.getElementById("box1").classList.add("hidden");
+    }
+
+    // Example 2: Toggle show/hide
+    function toggleBox() {
+      document.getElementById("box2").classList.toggle("hidden");
+    }
+
+    // Example 3: Toggle CSS class
+    function toggleHighlight() {
+      document.getElementById("text").classList.toggle("highlight");
+    }
+  </script>
+
+</body>
+</html>

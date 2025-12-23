@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Create & Manipulate Elements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 8px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    li {
+      background: #f0f0f0;
+      padding: 8px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .highlight {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation Example</h1>
+  <input type="text" id="itemInput" placeholder="Enter item">
+  <button id="addBtn">Add Item</button>
+  <button id="modifyBtn">Modify Last Item</button>
+  <button id="removeBtn">Remove Last Item</button>
+  <ul id="itemList"></ul>
+  <script>
+    const input = document.getElementById("itemInput");
+    const addBtn = document.getElementById("addBtn");
+    const modifyBtn = document.getElementById("modifyBtn");
+    const removeBtn = document.getElementById("removeBtn");
+    const list = document.getElementById("itemList");
+    // CREATE & APPEND ELEMENT
+    addBtn.addEventListener("click", () => {
+      if (input.value.trim() === "") {
+        alert("Please enter a value");
+        return;
+      }
+      const li = document.createElement("li");       // create element
+      li.textContent = input.value;                  // modify content
+
+      list.appendChild(li);                          // append child
+      input.value = "";
+    });
+    // MODIFY CHILD NODE
+    modifyBtn.addEventListener("click", () => {
+      const lastItem = list.lastElementChild;
+
+      if (!lastItem) {
+        alert("No item to modify");
+        return;
+      }
+      lastItem.textContent += " (modified)";
+      lastItem.classList.toggle("highlight");
+    });
+    // REMOVE CHILD NODE
+    removeBtn.addEventListener("click", () => {
+      const lastItem = list.lastElementChild;
+
+      if (!lastItem) {
+        alert("No item to remove");
+        return;
+      }
+      list.removeChild(lastItem);                    // remove child
+    });
+  </script>
+</body>
+</html>

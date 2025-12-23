@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table </title>
+    <style>
+        table { border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+         td, th {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+            
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Student Timetable</caption>
+        
+        <!-- Header Row -->
+        <tr>
+            <th>Day</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+            <th>Lunch</th>
+            <th>1:00 - 2:00</th>
+        </tr>
+
+        <!-- Monday Row -->
+        <tr>
+            <td>Monday</td>
+            <td>Math</td>
+            <td>Physics</td>
+            <td>Chemistry</td>
+            <td rowspan="5" style="vertical-align: middle;">Lunch Break</td> <!-- Merged vertically -->
+            <td>English</td>
+        </tr>
+
+        <!-- Tuesday Row -->
+        <tr>
+            <td>Tuesday</td>
+            <td colspan="2">Lab Session</td> <!-- Merged horizontally -->
+            <td>Biology</td>
+            <td>History</td>
+        </tr>
+
+        <!-- Wednesday Row -->
+        <tr>
+            <td>Wednesday</td>
+            <td>Computer</td>
+            <td>Math</td>
+            <td>Physics</td>
+            <td>Sports</td>
+        </tr>
+
+        <!-- Thursday Row -->
+        <tr>
+            <td>Thursday</td>
+            <td>Biology</td>
+            <td colspan="2">Seminar</td> <!-- Merged horizontally -->
+            <td>English</td>
+        </tr>
+
+        <!-- Friday Row -->
+        <tr>
+            <td>Friday</td>
+            <td>Math</td>
+            <td>Computer</td>
+            <td>Project Work</td>
+            <td>History</td>
+        </tr>
+    </table>
+
+</body>
+</html>
