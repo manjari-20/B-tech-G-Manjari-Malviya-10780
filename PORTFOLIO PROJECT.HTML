@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- CSS START -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #222;
+        }
+
+        section {
+            background: white;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            background: #ddd;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .project {
+            background: #eee;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <!-- CSS END -->
+</head>
+
+<body>
+
+<header>
+    <h1>Manjari Malviya</h1>
+    <p>Web Developer | Student</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a student learning web development.  
+        This is my responsive personal portfolio website created using HTML, CSS, and JavaScript.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C Programming</li>
+        <li>Git & GitHub</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Responsive Portfolio Website</h3>
+        <p>
+            A responsive personal portfolio website hosted using GitHub Pages.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: manjari@example.com</p>
+    <br>
+    <button onclick="showMessage()">Say Hello</button>
+</section>
+
+<footer>
+    <p>© 2026 Manjari Malviya</p>
+</footer>
+
+<!-- JAVASCRIPT START -->
+<script>
+    function showMessage() {
+        alert("Hello! Thanks for visiting my portfolio 😊");
+    }
+</script>
+<!-- JAVASCRIPT END -->
+
+</body>
+</html>
